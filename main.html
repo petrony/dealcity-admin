@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Панель управления услугами - DealCity</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://partners.test-dealcity.ru/lib/bootstrap/dist/css/bootstrap.min.css?v=Md8eaeo67OiouuXAi8t_Xpd8t2-IaJezATVTWbZqSOw?v=Md8eaeo67OiouuXAi8t_Xpd8t2-IaJezATVTWbZqSOw">
+    <link rel="stylesheet" href="https://partners.test-dealcity.ru/css/site.min.css?v=JFpGMtXWVasPa2zoSsxT9TCUS3AZyWHIPLrdQHPXfl4?v=JFpGMtXWVasPa2zoSsxT9TCUS3AZyWHIPLrdQHPXfl4">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <link rel="stylesheet" href="./css/aoc.css"/>
+    <link rel="stylesheet" href="./css/fancybox.min.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    <script src="./js/base/svg4everybody.min.js"></script>
+    <script src="./js/base/jquery.min.js"></script>
+    <script src="./js/base/tether.min.js"></script>
+    <script src="./js/base/popper.min.js"></script>
+    <script src="./js/base/bootstrap.min.js"></script>
+    <script src="./js/plugins/slick.js"></script>
+    <script src="./js/plugins/fancybox.min.js"></script>
+    <script src="./js/plugins/mask.js"></script>
+    <script src="./js/plugins/select2.full.min.js"></script>
+    <script src="./js/plugins/icheck.min.js"></script>
+    <script src="./js/plugins/aoc.js"></script>
+    <script src="./js/main.js"></script><!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/ie.css">
+    <script type="text/javascript" src="js/base/html5.js"></script>
+    <script type="text/javascript" src="js/base/modernizr.js"></script>
+    <script type="text/javascript" src="js/base/selectivizr.js"></script>
+    <script type="text/javascript" src="js/base/respond.js"></script><![endif]-->
+    <script>svg4everybody()</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><a class="navbar-brand" href="main.html"><img src="https://partners.test-dealcity.ru/img/logo.png" width="26" height="26" alt="">
+        
+        DealCity</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Помощь</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown01" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Аптека 36,7</a>
+            <div class="dropdown-menu pre-scrollable" aria-labelledby="dropdown01"><a class="dropdown-item" href="#">Аптека 36,7</a><a class="dropdown-item" href="#">СТО Уфа</a><a class="dropdown-item" href="#">Добавить</a></div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Профиль</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Товары</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Сотрудники</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Финансы</a></li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Никита</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Выйти</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Баланс: 0 руб.</a></li><a class="btn btn-success my-2 my-sm-0" href="#">Пополнить</a>
+          </ul>
+        </form>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="jumbotron">
+        <style>.pad-bot { margin-bottom: 1rem; }</style>
+        <div class="container">
+          <h1>Начислить бонус</h1>
+          <form id="bonus-form" method="post" action="#">
+            <div class="row">
+              <div class="col-md-3 pad-bot">
+                <input class="form-control phone" id="Phone" type="text" data-val="true" data-val-maxlength="Номер телефона указан неверно" data-val-maxlength-max="20" name="Phone" placeholder="Номер телефона" value=""><span class="text-danger field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+              </div>
+              <div class="col-md-3 pad-bot">
+                <input class="form-control dotify" id="PurchasePrice" type="text" data-val="true" data-val-number="The field Сумма покупки must be a number." data-val-range="Сумма покупки указана неверно" data-val-range-max="1.79769313486232E+308" data-val-range-min="0.01" data-val-required="Введите сумму" name="PurchasePrice" placeholder="Сумма покупки" value=""><span class="text-danger field-validation-valid" data-valmsg-for="PurchasePrice" data-valmsg-replace="true"></span>
+              </div>
+              <div class="col-md-3 pad-bot">
+                <button class="btn btn-success" type="submit" role="button">Начислить бонус »</button>
+              </div>
+              <div class="col-md-3 pad-bot"> </div>
+            </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8GI6MTkB-ptIh8VuV_rfOJ8JFvQKEFpVwF83S4KHP-OZtarS8vCgX8KIcRliDDMsn7sz9lcaLPnikQbYlgoHnFh5DBap5PEUtaQB4xk4SBfw-oSoM_R1OvvTPMPb0YcJaot0yChd86294bnebj3EUA5a3M0Ru-UmlIHW5zeIm0dlTG0Z9UtO0loJKe8uZl_Urw">
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-md-3 d-flex">
+            <div class="box w-100">
+              <h2>Товары</h2>
+              <p>Каталог товаров</p>
+              <p><a class="btn btn-success" role="button" href="#">Перейти »</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex">
+            <div class="box w-100">
+              <h2>Сотрудники</h2>
+              <p>Сотрудники организации</p>
+              <p><a class="btn btn-success" role="button" href="#">Перейти »</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex">
+            <div class="box w-100">
+              <h2>Профиль</h2>
+              <p>Общая информация, филиалы, контакты</p>
+              <p><a class="btn btn-success" role="button" href="#">Перейти »</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex">
+            <div class="box w-100">
+              <h2>Кэшбэки</h2>
+              <p>История продаж, чеки</p>
+              <p><a class="btn btn-success" role="button" href="#">Перейти »</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main><br><br><br>
+    <hr>
+    <footer class="container">
+      <div style="float: left">&copy; DealCity - 2019</div>
+      <div style="float: right"><a href="#">Договор-оферта</a></div>
+      <div style="clear: both"></div>
+    </footer>
+    <!-- Modal-->
+    <div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">Идет загрузка ...</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://partners.test-dealcity.ru/lib/jquery/dist/jquery.min.js?v=ihAoc6M_JPfrIiIeayPE9xjin4UWjsx2mjW_rtmxLM4?v=ihAoc6M_JPfrIiIeayPE9xjin4UWjsx2mjW_rtmxLM4"></script>
+    <script src="https://partners.test-dealcity.ru/lib/bootstrap/dist/js/bootstrap.min.js?v=xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8?v=xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8"></script>
+    <script src="https://partners.test-dealcity.ru/lib/jquery-inputmask/dist/jquery.inputmask.bundle.min.js?v=nk6l7rCQ90V0Q1vHbpR_vM7sJkJD-lphyPu2nwSjriM?v=nk6l7rCQ90V0Q1vHbpR_vM7sJkJD-lphyPu2nwSjriM"></script>
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://partners.test-dealcity.ru/js/site.min.js?v=K4dwZobTeeg7yzuPwFNPMy9B2GEZlzM7QsgT9vNtesM?v=K4dwZobTeeg7yzuPwFNPMy9B2GEZlzM7QsgT9vNtesM"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js" crossorigin="anonymous" integrity="sha384-Fnqn3nxp3506LP/7Y3j/25BlWeA3PXTyT1l78LjECcPaKCV12TsZP7yyMxOe/G/k"></script>
+    <script>(window.jQuery && window.jQuery.validator||document.write("\\u003Cscript src=\u0022\/lib\/jquery-validation\/dist\/jquery.validate.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-Fnqn3nxp3506LP\/7Y3j\/25BlWeA3PXTyT1l78LjECcPaKCV12TsZP7yyMxOe\/G\/k\u0022\u003E\u003C\/script\u003E"));</script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js" crossorigin="anonymous" integrity="sha384-JrXK+k53HACyavUKOsL+NkmSesD2P+73eDMrbTtTk0h4RmOF8hF8apPlkp26JlyH"></script>
+    <script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\\u003Cscript src=\u0022\/lib\/jquery-validation-unobtrusive\/jquery.validate.unobtrusive.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-JrXK\u002Bk53HACyavUKOsL\u002BNkmSesD2P\u002B73eDMrbTtTk0h4RmOF8hF8apPlkp26JlyH\u0022\u003E\u003C\/script\u003E"));</script>
+  </body>
+</html>
