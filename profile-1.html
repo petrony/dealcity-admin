@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Панель управления услугами - DealCity</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://partners.test-dealcity.ru/lib/bootstrap/dist/css/bootstrap.min.css?v=Md8eaeo67OiouuXAi8t_Xpd8t2-IaJezATVTWbZqSOw?v=Md8eaeo67OiouuXAi8t_Xpd8t2-IaJezATVTWbZqSOw">
+    <link rel="stylesheet" href="https://partners.test-dealcity.ru/css/site.min.css?v=JFpGMtXWVasPa2zoSsxT9TCUS3AZyWHIPLrdQHPXfl4?v=JFpGMtXWVasPa2zoSsxT9TCUS3AZyWHIPLrdQHPXfl4">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><a class="navbar-brand" href="main.html"><img src="https://partners.test-dealcity.ru/img/logo.png" width="26" height="26" alt="">
+        
+        DealCity</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Помощь</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown01" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Аптека 36,7</a>
+            <div class="dropdown-menu pre-scrollable" aria-labelledby="dropdown01"><a class="dropdown-item" href="#">Аптека 36,7</a><a class="dropdown-item" href="#">СТО Уфа</a><a class="dropdown-item" href="#">Добавить</a></div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Профиль</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Товары</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Сотрудники</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Финансы</a></li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Никита</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Выйти</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Баланс: 0 руб.</a></li><a class="btn btn-success my-2 my-sm-0" href="#">Пополнить</a>
+          </ul>
+        </form>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 pt-4">
+            <h1>Профиль</h1>
+            <form method="post" enctype="multipart/form-data" action="#">
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="Name">Название организации</label>
+                      <input class="form-control" id="Name" autofocus="autofocus" type="text" data-val="true" data-val-maxlength="Максимальная длина до 255 символов" data-val-maxlength-max="255" data-val-required="Введите название организации" name="Name" placeholder="Название организации" value="Аптека 36,7"><span class="text-danger field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="form-group col-md-2">
+                      <label for="BonusPercent">Кешбэк %</label>
+                      <input class="form-control dotify" id="BonusPercent" readonly="readonly" type="text" data-val="true" data-val-number="The field Кешбэк % must be a number." data-val-range="Введите правильный Кэшбэк" data-val-range-max="100" data-val-range-min="0" data-val-required="The Кешбэк % field is required." name="BonusPercent" placeholder="Кешбэк %" value="10.00"><span class="text-danger field-validation-valid" data-valmsg-for="BonusPercent" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="LogoFile">Логотип</label>
+                      <input class="form-control" id="LogoFile" type="file" name="LogoFile"><span class="text-danger field-validation-valid" data-valmsg-for="LogoFile" data-valmsg-replace="true"></span>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="Desc">Описание</label>
+                      <textarea class="form-control" id="Desc" rows="5" data-val="true" data-val-required="Введите описание" name="Desc">Лучшее место в городе, но это не точно...лекарства и не только</textarea><span class="text-danger field-validation-valid" data-valmsg-for="Desc" data-valmsg-replace="true"></span>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label class="control-label" for="CatId1">Категория</label>
+                      <select class="form-control" id="CatId1" name="CatId1">
+                        <option></option>
+                        <option value="1000">Кафе, бары, доставка еды</option>
+                        <option selected="selected" value="2000">Досуг и развлечения</option>
+                        <option value="3000">Магазины</option>
+                        <option value="4000">Красота и здоровье</option>
+                        <option value="5000">Сфера услуг</option>
+                        <option value="6000">Детям</option>
+                        <option value="7000">Авто</option>
+                        <option value="8000">Спорт и туризм</option>
+                        <option value="9000">Образование</option>
+                        <option value="10000">Строительство и ремонт</option>
+                        <option value="11000">Для бизнеса</option>
+                        <option value="12000">Прочее</option>
+                        <option value="13000">Одежда, обувь, аксессуары</option>
+                        <option value="14000">Мебель</option>
+                        <option value="15000">Для дома</option>
+                        <option value="16000">Техника</option>
+                        <option value="17000">Цветы и подарки</option>
+                      </select><span class="text-danger field-validation-valid" data-valmsg-for="CatId1" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label class="control-label" for="CatId2">Категория</label>
+                      <select class="form-control" id="CatId2" name="CatId2">
+                        <option></option>
+                        <option value="1000">Кафе, бары, доставка еды</option>
+                        <option value="2000">Досуг и развлечения</option>
+                        <option value="3000">Магазины</option>
+                        <option value="4000">Красота и здоровье</option>
+                        <option value="5000">Сфера услуг</option>
+                        <option value="6000">Детям</option>
+                        <option value="7000">Авто</option>
+                        <option value="8000">Спорт и туризм</option>
+                        <option value="9000">Образование</option>
+                        <option value="10000">Строительство и ремонт</option>
+                        <option value="11000">Для бизнеса</option>
+                        <option value="12000">Прочее</option>
+                        <option value="13000">Одежда, обувь, аксессуары</option>
+                        <option value="14000">Мебель</option>
+                        <option value="15000">Для дома</option>
+                        <option value="16000">Техника</option>
+                        <option value="17000">Цветы и подарки</option>
+                      </select><span class="text-danger field-validation-valid" data-valmsg-for="CatId2" data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label class="control-label" for="CatId3">Категория</label>
+                      <select class="form-control" id="CatId3" name="CatId3">
+                        <option></option>
+                        <option value="1000">Кафе, бары, доставка еды</option>
+                        <option value="2000">Досуг и развлечения</option>
+                        <option value="3000">Магазины</option>
+                        <option value="4000">Красота и здоровье</option>
+                        <option value="5000">Сфера услуг</option>
+                        <option value="6000">Детям</option>
+                        <option value="7000">Авто</option>
+                        <option value="8000">Спорт и туризм</option>
+                        <option value="9000">Образование</option>
+                        <option value="10000">Строительство и ремонт</option>
+                        <option value="11000">Для бизнеса</option>
+                        <option value="12000">Прочее</option>
+                        <option value="13000">Одежда, обувь, аксессуары</option>
+                        <option value="14000">Мебель</option>
+                        <option value="15000">Для дома</option>
+                        <option value="16000">Техника</option>
+                        <option value="17000">Цветы и подарки</option>
+                      </select><span class="text-danger field-validation-valid" data-valmsg-for="CatId3" data-valmsg-replace="true"></span>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="ExtraTerms">Особые условия</label>
+                      <input class="form-control" id="ExtraTerms" type="text" name="ExtraTerms" value=""><span class="text-danger field-validation-valid" data-valmsg-for="ExtraTerms" data-valmsg-replace="true"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label> </label><a href="https://images.test-dealcity.ru/6b860757-823a-430b-91be-a705f8ec9057.jpg" target="_blank"><img class="img-thumbnail" src="https://images.test-dealcity.ru/6b860757-823a-430b-91be-a705f8ec9057.jpg" alt="logo" style="max-width: 200px; max-height: 200px;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-success" type="submit">Сохранить</button>
+              <input name="__RequestVerificationToken" type="hidden" value="CfDJ8GI6MTkB-ptIh8VuV_rfOJ8hEus3li76aRFRghuRfQIdj9YcHZSdLluvWekgQWdVbuIWOQqJzf2kh8DeqIlpRc26hl757tOhJXgYaPetfuepd-Czs-opOw5un7zt2Y9naeb8HWVHtpA8CMTq1ezZo_fNKcNUIO2UeiHTa-jlZzXRmxhYmMO5TgaYswTrckXZTQ">
+            </form><br>
+            <div class="mb-4">
+              <h2>Филиалы</h2>
+              <table class="table small">
+                <thead>
+                  <tr>
+                    <th>Название филиала</th>
+                    <th>Адрес</th>
+                    <th>Телефон</th>
+                    <th>Активен</th>
+                    <th>Головной</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Гостевой дом "Любава"</td>
+                    <td>Зеленоград, корп 2090</td>
+                    <td>+7 (111) 111-11-11</td>
+                    <td>
+                      <input class="check-box" checked="checked" disabled="disabled" type="checkbox">
+                    </td>
+                    <td>
+                      <input class="check-box" checked="checked" disabled="disabled" type="checkbox">
+                    </td>
+                    <td><a class="modal-open" href="https://partners.test-dealcity.ru/orgs/225/branches/225">Редактировать</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row">
+              <div class="col-md-9">
+                <h2>Кассовый аппарат (ККТ)</h2>
+              </div>
+              <div class="col-md-3 text-right"><a class="link-add-apparat" href="#"><i class="mr-2">+</i><span>Добавить</span></a></div>
+            </div>
+            <table class="table small">
+              <thead>
+                <tr>
+                  <th>Филиал</th>
+                  <th>Номер ККТ</th>
+                  <th>Дата добавления</th>
+                  <th colspan="2">Примечания</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Аптека 36,6</td>
+                  <td>123456789987</td>
+                  <td>2020-01-26</td>
+                  <td>Текст примечания</td>
+                  <td class="text-right"><a href="#" data-toggle="modal" data-target="#modalAddApparate"><i class="fas fa-pencil-alt"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Аптека 36,6</td>
+                  <td>123456789987</td>
+                  <td>2020-01-26</td>
+                  <td>Текст примечания</td>
+                  <td class="text-right"><a href="#" data-toggle="modal" data-target="#modalAddApparate"><i class="fas fa-pencil-alt"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Аптека 36,6</td>
+                  <td>123456789987</td>
+                  <td>2020-01-26</td>
+                  <td>Текст примечания</td>
+                  <td class="text-right"><a href="#" data-toggle="modal" data-target="#modalAddApparate"><i class="fas fa-pencil-alt"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Аптека 36,6</td>
+                  <td>123456789987</td>
+                  <td>2020-01-26</td>
+                  <td>Текст примечания</td>
+                  <td class="text-right"><a href="#" data-toggle="modal" data-target="#modalAddApparate"><i class="fas fa-pencil-alt"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main><br/>
+<br/>
+<br/>
+<hr/>
+    <footer class="container">
+      <div style="float: left">&copy; DealCity - 2019</div>
+      <div style="float: right"><a href="#">Договор-оферта</a></div>
+      <div style="clear: both"></div>
+    </footer>
+    <!-- Modal-->
+    <div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">Идет загрузка ...</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://partners.test-dealcity.ru/lib/jquery/dist/jquery.min.js?v=ihAoc6M_JPfrIiIeayPE9xjin4UWjsx2mjW_rtmxLM4?v=ihAoc6M_JPfrIiIeayPE9xjin4UWjsx2mjW_rtmxLM4"></script>
+    <script src="https://partners.test-dealcity.ru/lib/bootstrap/dist/js/bootstrap.min.js?v=xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8?v=xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8"></script>
+    <script src="https://partners.test-dealcity.ru/lib/jquery-inputmask/dist/jquery.inputmask.bundle.min.js?v=nk6l7rCQ90V0Q1vHbpR_vM7sJkJD-lphyPu2nwSjriM?v=nk6l7rCQ90V0Q1vHbpR_vM7sJkJD-lphyPu2nwSjriM"></script>
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://partners.test-dealcity.ru/js/site.min.js?v=K4dwZobTeeg7yzuPwFNPMy9B2GEZlzM7QsgT9vNtesM?v=K4dwZobTeeg7yzuPwFNPMy9B2GEZlzM7QsgT9vNtesM"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js" crossorigin="anonymous" integrity="sha384-Fnqn3nxp3506LP/7Y3j/25BlWeA3PXTyT1l78LjECcPaKCV12TsZP7yyMxOe/G/k"></script>
+    <script>(window.jQuery && window.jQuery.validator||document.write("\\u003Cscript src=\u0022\/lib\/jquery-validation\/dist\/jquery.validate.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-Fnqn3nxp3506LP\/7Y3j\/25BlWeA3PXTyT1l78LjECcPaKCV12TsZP7yyMxOe\/G\/k\u0022\u003E\u003C\/script\u003E"));</script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js" crossorigin="anonymous" integrity="sha384-JrXK+k53HACyavUKOsL+NkmSesD2P+73eDMrbTtTk0h4RmOF8hF8apPlkp26JlyH"></script>
+    <script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\\u003Cscript src=\u0022\/lib\/jquery-validation-unobtrusive\/jquery.validate.unobtrusive.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-JrXK\u002Bk53HACyavUKOsL\u002BNkmSesD2P\u002B73eDMrbTtTk0h4RmOF8hF8apPlkp26JlyH\u0022\u003E\u003C\/script\u003E"));</script>
+    <div class="modal fade bd-example-modal-lg" id="modalAddApparate" tabindex="-1" role="dialog" aria-labelledby="#modalAddApparate">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <form method="post" enctype="multipart/form-data" action="#" novalidate="novalidate">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Кассовый аппарат (ККТ)</h5>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6 order-md-0 order-1">
+                  <div class="form-group">
+                    <label for="filial">Филиал</label>
+                    <select class="form-small custom-select custom-select-md">
+                      <option selected="">Аптека 36,6</option>
+                      <option value="1">Аптека 36,6</option>
+                      <option value="2">Аптека 36,6</option>
+                      <option value="3">Аптека 36,6</option>
+                      <option value="3">Аптека 36,6</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="num_kkt">Номер ККТ</label>
+                    <input class="form-control form-control-md" id="num_ktt" type="text" name="num_ktt" placeholder="123456789987">
+                  </div>
+                  <div class="form-group">
+                    <label for="note">Примечание</label>
+                    <textarea class="form-control form-control-md" id="note" name="note" placeholder="Текст примечания"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-6 order-md-1 order-0">
+                  <div class="box-img-check"><img class="img-fluid" src="images/img-check.jpg" alt="img-check"/>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group"></div>
+              <div class="form-group"></div>
+              <div class="form-group">
+                <div class="checkbox">
+                  <label>
+                    <input id="IsMain" type="checkbox" checked="checked"> Активен
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Отменить</button>
+              <button class="btn btn-primary" type="submit">Сохранить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
