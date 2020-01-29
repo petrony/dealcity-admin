@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"style.css","sourceRoot":"src/sass"}
+{"version":3,"sources":["_custome.sass"],"names":[],"mappings":"AAAA,UACE,WACA,YACA,kBACA,iBACA,eACA,0BAAA,AAAkB,uBAAlB,AAAkB,iBAAA,CAAG,sCAInB,cAAe,CAAG,uBAIlB,gBAAiB,CAFrB,uBAII,WACA,YACA,iBACA,UACA,kBACA,qCAAA,AACA,kCADA,AACA,6BAAA,cACA,cAAe,CAXnB,4DAcM,gCACA,oBAAqB,CAAG","file":"style.css","sourceRoot":"src/sass"}

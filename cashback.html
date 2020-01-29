@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Панель управления услугами - DealCity</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://partners.test-dealcity.ru/lib/bootstrap/dist/css/bootstrap.min.css?v=Md8eaeo67OiouuXAi8t_Xpd8t2-IaJezATVTWbZqSOw?v=Md8eaeo67OiouuXAi8t_Xpd8t2-IaJezATVTWbZqSOw">
+    <link rel="stylesheet" href="https://partners.test-dealcity.ru/css/site.min.css?v=JFpGMtXWVasPa2zoSsxT9TCUS3AZyWHIPLrdQHPXfl4?v=JFpGMtXWVasPa2zoSsxT9TCUS3AZyWHIPLrdQHPXfl4">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><a class="navbar-brand" href="main.html"><img src="https://partners.test-dealcity.ru/img/logo.png" width="26" height="26" alt="">
+        
+        DealCity</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Помощь</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown01" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Аптека 36,7</a>
+            <div class="dropdown-menu pre-scrollable" aria-labelledby="dropdown01"><a class="dropdown-item" href="#">Аптека 36,7</a><a class="dropdown-item" href="#">СТО Уфа</a><a class="dropdown-item" href="#">Добавить</a></div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Профиль</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Товары</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Сотрудники</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Финансы</a></li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Никита</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Выйти</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Баланс: 0 руб.</a></li><a class="btn btn-success my-2 my-sm-0" href="#">Пополнить</a>
+          </ul>
+        </form>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="container">
+        <div class="row align-items-center mb-3">
+          <div class="col-md-8 pt-4">
+            <h1>Профиль</h1>
+          </div>
+          <div class="col-md-4 pt-4">
+            <form action="#">
+              <div class="input-group border rounded">
+                <button class="btn btn-link text-secondary"><i class="fas fa-search"></i></button>
+                <input class="form-control border-0" type="text" placeholder="Поиск">
+              </div>
+            </form>
+          </div>
+        </div>
+        <table class="table table-responsive-lg table-cashback small border-bottom mb-4">
+          <thead>
+            <tr>
+              <th class="text-nowrap border-bottom-0">id</th>
+              <th class="text-nowrap border-bottom">Статус</th>
+              <th class="text-nowrap border-bottom">Дата</th>
+              <th class="text-nowrap border-bottom">Номер ККТ</th>
+              <th class="text-nowrap border-bottom">Филиал</th>
+              <th class="text-nowrap border-bottom">Получатель</th>
+              <th class="text-nowrap border-bottom">Сумма, ₽</th>
+              <th class="text-nowrap border-bottom">Кэшбэк</th>
+              <th class="border-bottom" colspan="2">Комиссия</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-nowrap">319</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-primary"><i class="fas fa-check mr-3"></i><span>Подтвердить</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">320</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-black-50"><i class="fas fa-check mr-3"></i><span>Подтверждён</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">319</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-primary"><i class="fas fa-check mr-3"></i><span>Подтвердить</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">320</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-black-50"><i class="fas fa-check mr-3"></i><span>Подтверждён</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">319</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-primary"><i class="fas fa-check mr-3"></i><span>Подтвердить</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">320</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-black-50"><i class="fas fa-check mr-3"></i><span>Подтверждён</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">319</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-primary"><i class="fas fa-check mr-3"></i><span>Подтвердить</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">320</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-black-50"><i class="fas fa-check mr-3"></i><span>Подтверждён</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">319</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-primary"><i class="fas fa-check mr-3"></i><span>Подтвердить</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">320</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-black-50"><i class="fas fa-check mr-3"></i><span>Подтверждён</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">319</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-primary"><i class="fas fa-check mr-3"></i><span>Подтвердить</span></td>
+            </tr>
+            <tr>
+              <td class="text-nowrap">320</td>
+              <td class="text-nowrap">Не подт.</td>
+              <td class="text-nowrap">2020-01-26</td>
+              <td class="text-nowrap">123456789987</td>
+              <td class="text-nowrap">СТО Уфа</td>
+              <td class="text-nowrap"><span class="mr-2">+7 (968) ***-*0-00</span><span class="text-dark box-info d-inline-block border">i</span></td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">4 500 200</td>
+              <td class="text-nowrap">2 % / 90 004.00 ₽</td>
+              <td class="text-nowrap text-black-50"><i class="fas fa-check mr-3"></i><span>Подтверждён</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row align-items-center">
+          <div class="col-md-9">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="current page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-3">
+            <select class="form-small custom-select custom-select-md">
+              <option selected="">Показывать по:  10</option>
+              <option value="1">Показывать по:  20</option>
+              <option value="2">Показывать по:  30</option>
+              <option value="3">Показывать по:  40</option>
+              <option value="3">Показывать по:  50</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </main><br><br><br>
+    <hr>
+    <footer class="container">
+      <div style="float: left">&copy; DealCity - 2019</div>
+      <div style="float: right"><a href="#">Договор-оферта</a></div>
+      <div style="clear: both"></div>
+    </footer>
+    <!-- Modal-->
+    <div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">Идет загрузка ...</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://partners.test-dealcity.ru/lib/jquery/dist/jquery.min.js?v=ihAoc6M_JPfrIiIeayPE9xjin4UWjsx2mjW_rtmxLM4?v=ihAoc6M_JPfrIiIeayPE9xjin4UWjsx2mjW_rtmxLM4"></script>
+    <script src="https://partners.test-dealcity.ru/lib/bootstrap/dist/js/bootstrap.min.js?v=xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8?v=xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8"></script>
+    <script src="https://partners.test-dealcity.ru/lib/jquery-inputmask/dist/jquery.inputmask.bundle.min.js?v=nk6l7rCQ90V0Q1vHbpR_vM7sJkJD-lphyPu2nwSjriM?v=nk6l7rCQ90V0Q1vHbpR_vM7sJkJD-lphyPu2nwSjriM"></script>
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://partners.test-dealcity.ru/js/site.min.js?v=K4dwZobTeeg7yzuPwFNPMy9B2GEZlzM7QsgT9vNtesM?v=K4dwZobTeeg7yzuPwFNPMy9B2GEZlzM7QsgT9vNtesM"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js" crossorigin="anonymous" integrity="sha384-Fnqn3nxp3506LP/7Y3j/25BlWeA3PXTyT1l78LjECcPaKCV12TsZP7yyMxOe/G/k"></script>
+    <script>(window.jQuery && window.jQuery.validator||document.write("\\u003Cscript src=\u0022\/lib\/jquery-validation\/dist\/jquery.validate.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-Fnqn3nxp3506LP\/7Y3j\/25BlWeA3PXTyT1l78LjECcPaKCV12TsZP7yyMxOe\/G\/k\u0022\u003E\u003C\/script\u003E"));</script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js" crossorigin="anonymous" integrity="sha384-JrXK+k53HACyavUKOsL+NkmSesD2P+73eDMrbTtTk0h4RmOF8hF8apPlkp26JlyH"></script>
+    <script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\\u003Cscript src=\u0022\/lib\/jquery-validation-unobtrusive\/jquery.validate.unobtrusive.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-JrXK\u002Bk53HACyavUKOsL\u002BNkmSesD2P\u002B73eDMrbTtTk0h4RmOF8hF8apPlkp26JlyH\u0022\u003E\u003C\/script\u003E"));</script>
+  </body>
+</html>
